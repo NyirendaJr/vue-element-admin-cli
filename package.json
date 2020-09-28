@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "lint": "eslint --ext .js,.vue src",
-    "build:prod": "vue-cli-service build",
-    "build:stage": "vue-cli-service build --mode staging",
+    "build:prod": "rm -rf ../../../public/assets/admin/{js,css,img} && vue-cli-service build --no-clean",
+    "build:stage": "rm -rf ../../../public/assets/admin/{js,css,img} && vue-cli-service build --no-clean --mode staging",
     "preview": "node build/index.js --preview",
     "new": "plop",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
